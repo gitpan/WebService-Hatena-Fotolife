@@ -1,0 +1,12 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         WebService-Hatena-Fotolife
+version:      0.01
+version_from: lib/WebService/Hatena/Fotolife.pm
+installdirs:  site
+requires:
+    Image::Info:                   0
+    XML::Atom:                     0.11
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.25
