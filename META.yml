@@ -1,12 +1,29 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         WebService-Hatena-Fotolife
-version:      0.01
-version_from: lib/WebService/Hatena/Fotolife.pm
-installdirs:  site
-requires:
-    Image::Info:                   0
-    XML::Atom:                     0.11
-
+---
+abstract: 'A Perl interface to the'
+author:
+  - 'Kentaro Kuribayashi, <kentarok@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.59
+configure_requires:
+  ExtUtils::MakeMaker: 6.59
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.25
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: WebService-Hatena-Fotolife
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Image::Info: 0
+  XML::Atom: 0.11
+  perl: 5.8.1
+resources:
+  bugtracker: http://github.com/kentaro/perl-webservice-hatena-fotolife/issues
+  license: http://opensource.org/licenses/mit-license.php
+  repository: http://github.com/kentaro/perl-webservice-hatena-fotolife
+version: 0.06

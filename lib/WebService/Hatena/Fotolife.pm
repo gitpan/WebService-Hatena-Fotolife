@@ -10,7 +10,7 @@ use Image::Info qw(image_info);
 
 use WebService::Hatena::Fotolife::Entry;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 our $PostURI = 'http://f.hatena.ne.jp/atom/post';
 our $FeedURI = 'http://f.hatena.ne.jp/atom/feed';
 
@@ -141,9 +141,14 @@ sub _get_image {
     return $self->error($info->{error})
         if $info->{error} and $info->{error} !~ /short read/;
 
+    my $mime = $info->{file_media_type};
+    if (ref $mime eq 'ARRAY') {
+        $mime = $mime->[0];
+    }
+
     +{
         content      => $image,
-        content_type => $info->{file_media_type},
+        content_type => $mime,
     };
 }
 
