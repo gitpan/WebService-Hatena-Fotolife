@@ -20,10 +20,11 @@ no_index:
     - t
 requires:
   Image::Info: 0
+  OAuth::Lite: 0
   XML::Atom: 0.11
   perl: 5.8.1
 resources:
   bugtracker: http://github.com/kentaro/perl-webservice-hatena-fotolife/issues
   license: http://opensource.org/licenses/mit-license.php
   repository: http://github.com/kentaro/perl-webservice-hatena-fotolife
-version: 0.06
+version: 0.07
